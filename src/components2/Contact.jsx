@@ -27,7 +27,9 @@ const Contact = () => {
     setData({ ...data, [property]: event.target.value });
   };
 
-  console.log(data);
+  const handleSubmit = () => {
+    alert(JSON.stringify(data));
+  };
 
   return (
     <section
@@ -61,7 +63,7 @@ const Contact = () => {
         </p>
       </div>
       <div className="flex flex-col w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] py-2 sm:p-4 p-3 overflow-hidden">
-        <form action="">
+        <form action="post">
           <div
             className={`relative mb-4 z-[2] ${
               scroll ? "fade-in-from-left-to-right" : "hidden"
@@ -137,6 +139,7 @@ const Contact = () => {
             <Button
               value="Let's Collaborate"
               styles="mt-[10px] md:mt-[20px] text-[10px]  xs:text-[14px]"
+              onClick={handleSubmit}
             />
           </div>
         </form>
