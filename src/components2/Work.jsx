@@ -43,7 +43,7 @@ const Work = () => {
       </div>
       {work.map((project, index) => (
         <div
-          className={`flex justify-center items-center w-[85%] sm:w-[70%]  lg:w-[50%] ${
+          className={`flex justify-center items-center w-[85%] sm:w-[70%] lg:w-[50%] ${
             scroll
               ? [
                   index % 2 !== 0
@@ -54,15 +54,18 @@ const Work = () => {
           }`}
         >
           <div className="w-[20%] h-full hidden sm:flex justify-center items-center pr-5 pl-2 sm:pr-8 sm:pl-0">
-            <div className="flex relative justify-center items-center bg-[#9d1010] h-[90px] lg:h-[100px] w-[2.5px] rounded-[10px]">
+            <div className="flex relative justify-center items-center bg-[#9d1010] h-[90px] lg:h-[90%] w-[2.5px] rounded-[10px]">
               <div className="absolute w-[8px] h-[8px] bg-[#C2CCE5] rounded-full" />
             </div>
           </div>
           <div
-            className={`${styles.paragraph} px-5 py-5 border-l-[red] border-l-[1px] border-t-[red] border-t-[1px] rounded-[20px] hover:scale-[1.03] transform transition duration-200 hover:cursor-pointer mb-[10px] work-card`}
+            className={`${styles.paragraph} w-full px-5 py-5 border-l-[red] border-l-[1px] border-t-[red] border-t-[1px] rounded-[20px] hover:scale-[1.03] transform transition duration-200 hover:cursor-pointer mb-[10px] work-card`}
           >
-            <span className="font-semibold text-[12px] text-[#9d1010]">{project.title}{" - "}</span>
-            {project.content}
+            <span className="font-semibold text-[12px] text-[#9d1010] uppercase">
+              {project.title}
+              {" - "}
+            </span>
+            <span className="text-justify">{project.content}</span>
           </div>
         </div>
       ))}
