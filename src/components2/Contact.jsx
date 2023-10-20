@@ -40,14 +40,14 @@ const Contact = () => {
         <div className="flex flex-col sm:p-4 p-3">
           <h2
             className={`font-poppins font-semibold sm:text-[30px] md:text-[40px] text-[24px] sm:leading-[60px] leading-[50px] text-white opacity-80 ${
-              scroll ? "fade-in-from-TopToBottom" : "lg:hidden"
+              scroll ? "fade-in-from-TopToBottom" : "hidden"
             }`}
           >
             Contact
           </h2>
           <div
             className={`border-[#962929] sm:border-b-[5px] border-b-[3px] rounded-2xl ${
-              scroll ? "fade-in-from-BottomToTop" : "lg:hidden"
+              scroll ? "fade-in-from-BottomToTop" : "hidden"
             }`}
           />
         </div>
@@ -55,7 +55,7 @@ const Contact = () => {
           className={`flex items-center sm:justify-start justify-center ${
             styles.paragraph
           } w-full text-dimWhite sm:px-5 px-3 sm:pb-5 pb-2 ${
-            scroll ? "fade-in-from-TopToBottom" : "lg:hidden"
+            scroll ? "fade-in-from-TopToBottom" : "hidden"
           }`}
         >
           // Submit the form below or shoot me an email -
@@ -66,7 +66,7 @@ const Contact = () => {
         <form action="post">
           <div
             className={`relative mb-4 z-[2] ${
-              scroll ? "fade-in-from-left-to-right" : "lg:hidden"
+              scroll ? "fade-in-from-left-to-right" : "hidden"
             }`}
             data-te-input-wrapper-init
           >
@@ -88,7 +88,7 @@ const Contact = () => {
           </div>
           <div
             className={`relative mb-4 z-[1] ${
-              scroll ? "fade-in-from-right-to-left" : "lg:hidden"
+              scroll ? "fade-in-from-right-to-left" : "hidden"
             }`}
             data-te-input-wrapper-init
           >
@@ -110,7 +110,7 @@ const Contact = () => {
           </div>
           <div
             className={`relative mb-4 z-[0] ${
-              scroll ? "fade-in-from-left-to-right" : "lg:hidden"
+              scroll ? "fade-in-from-left-to-right" : "hidden"
             }`}
             data-te-input-wrapper-init
           >
@@ -133,7 +133,7 @@ const Contact = () => {
           </div>
           <div
             className={`w-full flex justify-center ${
-              scroll ? "fade-in-from-BottomToTop" : "lg:hidden"
+              scroll ? "fade-in-from-BottomToTop" : "hidden"
             }`}
           >
             <Button

@@ -20,14 +20,14 @@ const Work = () => {
         <div className="flex flex-col sm:p-4 p-3">
           <h2
             className={`font-poppins font-semibold sm:text-[30px] md:text-[40px] text-[24px] sm:leading-[60px] leading-[50px] text-white opacity-80 ${
-              scroll ? "fade-in-from-TopToBottom" : "lg:hidden"
+              scroll ? "fade-in-from-TopToBottom" : "hidden"
             }`}
           >
             Work
           </h2>
           <div
             className={`border-[#962929] sm:border-b-[5px] border-b-[3px] rounded-2xl ${
-              scroll ? "fade-in-from-BottomToTop" : "lg:hidden"
+              scroll ? "fade-in-from-BottomToTop" : "hidden"
             }`}
           />
         </div>
@@ -35,7 +35,7 @@ const Work = () => {
           className={`flex items-center sm:justify-start justify-center ${
             styles.paragraph
           } w-full text-dimWhite sm:px-5 px-3 sm:pb-5 pb-2 ${
-            scroll ? "fade-in-from-TopToBottom" : "lg:hidden"
+            scroll ? "fade-in-from-TopToBottom" : "hidden"
           }`}
         >
           // These are the technologies I’ve worked with
@@ -50,7 +50,7 @@ const Work = () => {
                     ? "fade-in-from-right-to-left"
                     : "fade-in-from-left-to-right",
                 ]
-              : "lg:hidden"
+              : "hidden"
           }`}
         >
           <div className="w-[20%] h-full hidden sm:flex justify-center items-center pr-5 pl-2 sm:pr-8 sm:pl-0">
