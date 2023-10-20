@@ -12,20 +12,20 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="flex flex-col justify-center items-center w-full h-full md:h-screen md:py-0 py-[80px]"
+      className="flex flex-col justify-center items-center w-full h-screen md:py-0 py-[80px]"
     >
       <div className="w-[80%] sm:w-[70%] lg:w-[50%] flex flex-col justify-center sm:pb-0 pb-[30px] sm:items-start items-center overflow-hidden">
         <div className="flex flex-col sm:p-4 p-3">
           <h2
             className={`font-poppins font-semibold sm:text-[40px] text-[30px] sm:leading-[60px] leading-[50px] text-white opacity-80 ${
-              scroll ? "fade-in-from-TopToBottom" : "hidden"
+              scroll ? "fade-in-from-TopToBottom" : "lg:hidden"
             }`}
           >
             Experience
           </h2>
           <div
             className={`border-[#962929] sm:border-b-[5px] border-b-[3px] rounded-2xl ${
-              scroll ? "fade-in-from-BottomToTop" : "hidden"
+              scroll ? "fade-in-from-BottomToTop" : "lg:hidden"
             }`}
           />
         </div>
@@ -33,7 +33,7 @@ const Experience = () => {
           className={`flex items-center sm:justify-start justify-center ${
             styles.paragraph
           } w-full text-dimWhite sm:px-5 px-3 sm:pb-5 pb-2 ${
-            scroll ? "fade-in-from-left-to-right" : "hidden"
+            scroll ? "fade-in-from-left-to-right" : "lg:hidden"
           }`}
         >
           // These are the technologies I’ve worked with
@@ -47,7 +47,7 @@ const Experience = () => {
                 index % 2 !== 0
                   ? "fade-in-from-left-to-right"
                   : "fade-in-from-right-to-left",
-              ] : "hidden"
+              ] : "lg:hidden"
             }`}
           >
             <img
@@ -58,13 +58,13 @@ const Experience = () => {
                   index % 2 !== 0
                     ? "fade-in-from-left-to-right"
                     : "fade-in-from-right-to-left",
-                ] : "hidden"
+                ] : "lg:hidden"
               } my-2`}
               alt="html"
             />
             <p
               className={`${styles.paragraph} text-dimWhite pb-5 ${
-                scroll ? "fade-in-from-right-to-left" : "hidden"
+                scroll ? "fade-in-from-right-to-left" : "lg:hidden"
               } justify-center items-center flex w-full h-full`}
             >
               {exp.title}
