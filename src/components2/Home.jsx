@@ -17,10 +17,10 @@ const Home = () => {
         </p>
         <h2 className={`${styles.heading2} overflow-hidden`}>
           <span className="text-[#C2CCE5]">
-          <TypeWriter
+            <TypeWriter
               options={{
-                strings: ["Rohit Ghorai","Rohit"],
-                delay:200,
+                strings: ["Rohit Ghorai", "Rohit"],
+                delay: 200,
                 autoStart: true,
                 loop: true,
               }}
@@ -36,13 +36,25 @@ const Home = () => {
           building responsive full-stack web applications.
         </p>
         <div className="flex lg:hidden flex-row text-[#828da6] mt-[20px] sm:gap-[20px] gap-[15px]">
-          <FaLinkedin className="cursor-pointer hover:bg-[white] hover:text-[#0e76a8] sm:hover:scale-125 transform transition duration-300 w-[40px] h-[40px]" />
-          <FaGithubSquare className="cursor-pointer hover:bg-[white] hover:text-[#1c1b1b] sm:hover:scale-125 transform transition duration-300 w-[40px] h-[40px]" />
-          <BsInstagram className="cursor-pointer hover:bg-[white] w-[40px] h-[40px] sm:hover:scale-125 transform transition duration-300 instagram" />
-          <FaFacebookSquare className="cursor-pointer hover:bg-[white] hover:text-[#0165E1] sm:hover:scale-125 transform transition duration-300 w-[40px] h-[40px]" />
+          <a
+            key="linkedin"
+            href="https://www.linkedin.com/in/rohit-ghorai-9b6717210/"
+          >
+            <FaLinkedin className="cursor-pointer hover:bg-[white] hover:text-[#0e76a8] sm:hover:scale-125 transform transition duration-300 w-[40px] h-[40px]" />
+          </a>
+          <a key="github" href="https://www.github.com/RohitGhorai">
+            <FaGithubSquare className="cursor-pointer hover:bg-[white] hover:text-[#1c1b1b] sm:hover:scale-125 transform transition duration-300 w-[40px] h-[40px]" />
+          </a>
+          <a key="instagram" href="https://www.instagram.com/rohit.ghorai_">
+            <BsInstagram className="cursor-pointer hover:text-[white] hover:bg-gradient-to-r from-[#f09433] to-[#bc1888] w-[40px] h-[40px] sm:hover:scale-125 transform transition duration-300 instagram" />
+          </a>
+          <a key="facebook" href="https://www.facebook.com/rohit.ghorai.37/">
+            <FaFacebookSquare className="cursor-pointer hover:bg-[white] hover:text-[#0165E1] sm:hover:scale-125 transform transition duration-300 w-[40px] h-[40px]" />
+          </a>
         </div>
-        <a href="#work"><Button styles="mt-[20px] md:mt-[35px]" value="View Work" /></a>
-
+        <a href="#work">
+          <Button styles="mt-[20px] md:mt-[35px]" value="View Work" />
+        </a>
       </div>
       <div className="flex justify-center sm:justify-start xs:p-[35px] py-[20px]">
         <div className="relative sm:w-[320px] sm:h-[320px] xs:w-[260px] xs:h-[260px] w-[163px] h-[163px] rounded-full bg-[#D9D9D9] lg:hover:scale-125 transform transition duration-300 lg:hover:cursor-pointer">
