@@ -55,7 +55,8 @@ const Work = () => {
         >
           <div className="w-[20%] h-full hidden sm:flex justify-center items-center pr-5 pl-2 sm:pr-8 sm:pl-0">
             <div className="flex relative justify-center items-center bg-[#9d1010] h-[90px] lg:h-[90%] w-[2.5px] rounded-[10px]">
-              <div className="absolute w-[8px] h-[8px] bg-[#C2CCE5] rounded-full" />
+              <div className="absolute w-[12px] h-[12px] bg-[#C2CCE5] rounded-full" />
+              <div className="absolute w-[8px] h-[8px] bg-[#9d1010] rounded-full" />
             </div>
           </div>
           <div
