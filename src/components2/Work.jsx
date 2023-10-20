@@ -14,7 +14,7 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="flex flex-col justify-center items-center w-full h-full md:h-screen overflow-hidden"
+      className="flex flex-col justify-center items-center w-full h-screen overflow-hidden"
     >
       <div className="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] flex flex-col justify-center sm:pb-0 pb-[30px] sm:items-start items-center overflow-hidden">
         <div className="flex flex-col sm:p-4 p-3">
