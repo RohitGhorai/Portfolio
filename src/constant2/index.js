@@ -1,4 +1,13 @@
-import { HTML, NODEJS, MYSQL, AWS, JS, CSS, REACT } from "../assets2/index";
+import {
+  HTML,
+  NODEJS,
+  MYSQL,
+  AWS,
+  JS,
+  CSS,
+  REACT,
+  GITHUB,
+} from "../assets2/index";
 
 export const navLinks = [
   {
@@ -27,42 +36,42 @@ export const exp = [
   {
     id: "1",
     title: "HTML",
-    src: { HTML },
+    src: HTML,
   },
   {
     id: "2",
     title: "CSS",
-    src: { CSS },
+    src: CSS,
   },
   {
     id: "3",
     title: "Javascript",
-    src: { JS },
+    src: JS,
   },
   {
     id: "4",
     title: "React",
-    src: { REACT },
+    src: REACT,
   },
   {
     id: "5",
     title: "Github",
-    src: { GITHUB },
+    src: GITHUB,
   },
   {
     id: "6",
     title: "Node JS",
-    src: { NODEJS },
+    src: NODEJS,
   },
   {
     id: "7",
     title: "MySql",
-    src: { MYSQL },
+    src: MYSQL,
   },
   {
     id: "8",
     title: "AWS",
-    src: { AWS },
+    src: AWS,
   },
 ];
 
