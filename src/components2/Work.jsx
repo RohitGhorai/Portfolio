@@ -59,13 +59,13 @@ const Work = () => {
             </div>
           </div>
           <div
-            className={`${styles.paragraph} w-full px-5 py-5 border-l-[red] border-l-[1px] border-t-[red] border-t-[1px] rounded-[20px] hover:scale-[1.03] transform transition duration-200 hover:cursor-pointer mb-[10px] work-card`}
+            className={`${styles.paragraph} w-full px-5 py-5 border-l-[red] border-l-[1px] border-t-[red] border-t-[1px] rounded-[20px] hover:scale-[1.03] transform transition duration-200 hover:cursor-pointer mb-[10px] work-card text-justify`}
           >
             <span className="font-semibold text-[12px] text-[#9d1010] uppercase">
               {project.title}
               {" - "}
             </span>
-            <span className="text-justify">{project.content}</span>
+            <span>{project.content}</span>
           </div>
         </div>
       ))}
