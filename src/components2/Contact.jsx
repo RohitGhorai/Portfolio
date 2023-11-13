@@ -1,6 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { styles } from "../style";
 import Button from "./Button";
+import emailjs from "@emailjs/browser";
 
 const style = {
   label:
@@ -14,7 +15,7 @@ const Contact = () => {
   const [data, setData] = useState({
     name: "",
     email: "",
-    address: "",
+    message: "",
   });
 
   useEffect(() => {
@@ -23,12 +24,40 @@ const Contact = () => {
     );
   }, []);
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_ghnyueb",
+        "template_n3tcew7",
+        form.current,
+        "XtFCtUgBM-b-z4xU9"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   const handleChange = (event, property) => {
     setData({ ...data, [property]: event.target.value });
   };
 
-  const handleSubmit = () => {
-    alert(JSON.stringify(data));
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("You have successfully send the email.");
+    setData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   return (
@@ -59,11 +88,11 @@ const Contact = () => {
           }`}
         >
           // Submit the form below or shoot me an email -
-          rohitghorai44@gmail.com
+          mail2rohitghorai@gmail.com
         </p>
       </div>
       <div className="flex flex-col w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] py-2 sm:p-4 p-3 overflow-hidden">
-        <form action="post">
+        <form ref={form} onSubmit={sendEmail}>
           <div
             className={`relative mb-4 z-[2] ${
               scroll ? "fade-in-from-left-to-right" : "hidden"
@@ -72,15 +101,16 @@ const Contact = () => {
           >
             <input
               type="text"
+              name="user_name"
               placeholder="Name"
               className={`${style.input}`}
               onChange={(event) => handleChange(event, "name")}
+              value={data.name}
             />
             <label
               className={`${style.label} ${
-                data.name.length > 0
-                  ? "-translate-y-[1.15rem] scale-[0.8] bg-[#04172D] px-1 text-[#b0b6c6]"
-                  : ""
+                data.name.length > 0 &&
+                "-translate-y-[1.15rem] scale-[0.8] bg-[#04172D] rounded-[5px] px-1 dark:text-white"
               }`}
             >
               Name
@@ -94,15 +124,16 @@ const Contact = () => {
           >
             <input
               type="text"
+              name="user_email"
               placeholder="E-mail Id"
               className={`${style.input}`}
               onChange={(event) => handleChange(event, "email")}
+              value={data.email}
             />
             <label
               className={`${style.label} ${
-                data.email.length > 0
-                  ? "-translate-y-[1.15rem] scale-[0.8] bg-[#04172D] px-1 text-[#b0b6c6]"
-                  : ""
+                data.email.length > 0 &&
+                "-translate-y-[1.15rem] scale-[0.8] bg-[#04172D] rounded-[5px] px-1 dark:text-white"
               }`}
             >
               E-mail Id
@@ -116,19 +147,21 @@ const Contact = () => {
           >
             <textarea
               type="text"
+              name="message"
               rows={3}
-              placeholder="Address"
+              placeholder="Message"
               className={`${style.input}`}
-              onChange={(event) => handleChange(event, "address")}
+              onChange={(event) => handleChange(event, "message")}
+              value={data.message}
             />
             <label
               className={`${style.label} ${
-                data.address.length > 0
-                  ? "-translate-y-[1.15rem] scale-[0.8] bg-[#04172D] px-1 text-[#b0b6c6]"
+                data.message.length > 0
+                  ? "-translate-y-[1.15rem] scale-[0.8] bg-[#04172D] px-1 dark:text-white"
                   : ""
               }`}
             >
-              Address
+              Message
             </label>
           </div>
           <div
@@ -137,6 +170,7 @@ const Contact = () => {
             }`}
           >
             <Button
+              type="submit"
               value="Let's Collaborate"
               styles="mt-[10px] md:mt-[20px] text-[10px]  xs:text-[14px]"
               onClick={handleSubmit}

@@ -30,10 +30,7 @@ const Navbar = ({ scrollProgress }) => {
           <ul className="hidden sm:flex gap-[44px] items-center justify-end">
             {navLinks.map((navLink) => (
               <a href={`#${navLink.id}`} key={`${navLink.id}`}>
-                <li
-                  
-                  className="font-poppins text-[#9B96B9] text-[18px] hover:text-white hover:scale-125 transform transition duration-300"
-                >
+                <li className="font-poppins text-[#9B96B9] text-[18px] hover:text-white hover:scale-125 transform transition duration-300">
                   {navLink.title}
                 </li>
               </a>
@@ -54,22 +51,19 @@ const Navbar = ({ scrollProgress }) => {
           className={
             !toggle
               ? "hidden"
-              : "absolute top-0 w-full h-screen flex flex-col justify-center items-center navToggle"
+              : "absolute top-0 w-full h-[100vh] border-2 border-[red] flex flex-col justify-center items-center navToggle"
           }
         >
           {navLinks.map((navLink) => (
             <a href={`#${navLink.id}`} key={`${navLink.id}`}>
-              <li
-                
-                className="font-poppins py-6 text-white text-2xl hover:text-[#b7b4c8]"
-              >
+              <li className="font-poppins py-6 text-white text-2xl hover:text-[#b7b4c8]">
                 {navLink.title}
               </li>
             </a>
           ))}
         </ul>
       </nav>
-      <div className="h-screen fixed right-0 z-[100]" key={'progress'}>
+      <div className="h-screen fixed right-0 z-[100]" key={"progress"}>
         <div
           className="bg-[#962929] w-[3px] lg:w-[5px] rounded"
           style={{
