@@ -51,7 +51,7 @@ const Navbar = ({ scrollProgress }) => {
           className={
             !toggle
               ? "hidden"
-              : "absolute top-0 w-full h-[100vh] border-2 border-[red] flex flex-col justify-center items-center navToggle"
+              : "absolute top-0 w-full h-[100vh] flex flex-col justify-center items-center navToggle"
           }
         >
           {navLinks.map((navLink) => (
