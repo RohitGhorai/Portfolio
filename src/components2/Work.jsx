@@ -14,9 +14,9 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="flex flex-col justify-center items-center w-full h-screen overflow-hidden"
+      className="flex flex-col justify-center items-center w-full lg:h-screen h-full overflow-hidden"
     >
-      <div className="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] flex flex-col justify-center sm:pb-0 pb-[30px] sm:items-start items-center overflow-hidden">
+      <div className="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] flex flex-col justify-center sm:pb-0 pb-[30px] items-center overflow-hidden">
         <div className="flex flex-col sm:p-4 p-3">
           <h2
             className={`font-poppins font-semibold sm:text-[30px] md:text-[40px] text-[24px] sm:leading-[60px] leading-[50px] text-white opacity-80 ${
@@ -32,7 +32,7 @@ const Work = () => {
           />
         </div>
         <p
-          className={`flex items-center sm:justify-start justify-center ${
+          className={`flex items-center justify-center ${
             styles.paragraph
           } w-full text-dimWhite sm:px-5 px-3 sm:pb-5 pb-2 ${
             scroll ? "fade-in-from-TopToBottom" : "hidden"
@@ -41,35 +41,30 @@ const Work = () => {
           // These are the technologies I’ve worked with
         </p>
       </div>
-      {work.map((project, index) => (
-        <div
-          className={`flex justify-center items-center w-[85%] sm:w-[70%] lg:w-[50%] ${
-            scroll
-              ? [
-                  index % 2 !== 0
-                    ? "fade-in-from-right-to-left"
-                    : "fade-in-from-left-to-right",
-                ]
-              : "hidden"
-          }`}
-        >
-          <div className="w-[20%] h-full hidden sm:flex justify-center items-center pr-5 pl-2 sm:pr-8 sm:pl-0">
-            <div className="flex relative justify-center items-center bg-[#9d1010] h-[90px] lg:h-[90%] w-[2.5px] rounded-[10px]">
-              <div className="absolute w-[12px] h-[12px] bg-[#C2CCE5] rounded-full" />
-              <div className="absolute w-[8px] h-[8px] bg-[#9d1010] rounded-full" />
+      <div className="flex flex-wrap justify-evenly w-[80%] h-[80%] overflow-hidden md:p-[50px] p-[20px]">
+        {work.map((card) => (
+          <div className="flip-card flex justify-center items-center w-[80%] sm:w-[350px] h-[250px] rounded-[8px] sm:m-[10px] m-[5px] hover:cursor-pointer work-card relative shadow-lg hover:shadow-[#211e36] overflow-hidden">
+            <div className="flip-card-inner w-full h-full">
+              <div className="flip-card-front flex justify-center items-center text-xl text-[white] font-mono bg-[#211e36] bg-opacity-1 m-[2px] border-[0.5px] border-cyan-400 rounded-[8px]">
+                <span className="text-center p-5">{card.title}</span>
+              </div>
+              <div className="flip-card-back flex flex-col justify-center items-center text-sm text-[white] font-mono bg-gray-800 m-[2px] border-[1px] border-cyan-400 rounded-[8px]">
+                <span className="text-center font-poppins p-5">
+                  {card.content}
+                </span>
+                <a href={card.src}>
+                  <button
+                    className="w-[80px] h-[40px] font-semibold rounded-[5px] border-[1px] font-mono border-cyan-400 bg-cyan-400 hover:bg-cyan-500 text-[#000] hover:scale-[1.03] transition-transform duration-200"
+                    href={card.src}
+                  >
+                    Visit
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
-          <div
-            className={`${styles.paragraph} w-full px-5 py-5 border-l-[red] border-l-[1px] border-t-[red] border-t-[1px] rounded-[20px] hover:scale-[1.03] transform transition duration-200 hover:cursor-pointer mb-[10px] work-card text-justify`}
-          >
-            <span className="font-semibold text-[12px] text-[#9d1010] uppercase">
-              {project.title}
-              {" - "}
-            </span>
-            <span>{project.content}</span>
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 };

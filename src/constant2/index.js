@@ -80,25 +80,30 @@ export const work = [
     title: "Library Management System",
     content:
       'The project "Library Management System" is developed in web base, which mainly focuses on basic operations in a library like adding new member, new books, and updating new information, searching books and members and facility to borrow and return books. (Guided by Dr. Sangram Keshari Swain)',
+    src: "https://github.com/RohitGhorai/GramTarang",
   },
   {
     title: "Solar Mobile Charger",
     content:
       "A solar cell which forms a primary part of the solar mobile charger works on the principle of photovoltaic effect. (Guided by Prof. Nimay Chandra Giri)",
+    src: "https://github.com/RohitGhorai/GramTarang",
   },
   {
     title: "School Management System",
     content:
       "The school management system is a web-based system which will use as a platform for interaction between student, teachers, and parents. (Guided by Mr. Nilmadhab Dash)",
+    src: "https://github.com/RohitGhorai/GramTarang",
   },
   {
-    title: "Blog web App Using React JS and Spring Boot",
+    title: "Blogging App",
     content:
       "In this project, user and admin can post their answers on different topics. We can use this project for develop an educational web app like w3schools, Javapoint etc.",
+    src: "https://github.com/RohitGhorai/Blog-web-app-frontened",
   },
   {
     title: "Assessment Management System",
     content:
       "We develop web application for a nodal or training center, in which there are many students can register and apply as a trainer in that training center and trained with certification.",
+    src: "https://github.com/RohitGhorai/GramTarang",
   },
 ];

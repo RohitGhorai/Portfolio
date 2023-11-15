@@ -37,7 +37,7 @@ function App2() {
   return (
     <div className="bg-[#04172D] overflow-hidden">
       <Sidebar />
-      <Navbar scrollProgress={scrollProgress}/>
+      <Navbar scrollProgress={scrollProgress} />
       <Home />
       <ProgressBar styles="flex" />
       <About />

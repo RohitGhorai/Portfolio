@@ -14,7 +14,7 @@ const Experience = () => {
       id="experience"
       className="flex flex-col justify-center items-center w-full h-screen md:py-0 py-[80px]"
     >
-      <div className="w-[80%] sm:w-[70%] lg:w-[50%] flex flex-col justify-center sm:pb-0 pb-[30px] sm:items-start items-center overflow-hidden">
+      <div className="w-[80%] sm:w-[70%] lg:w-[50%] flex flex-col justify-center sm:pb-0 pb-[30px] items-center overflow-hidden">
         <div className="flex flex-col sm:p-4 p-3">
           <h2
             className={`font-poppins font-semibold sm:text-[40px] text-[30px] sm:leading-[60px] leading-[50px] text-white opacity-80 ${
@@ -30,7 +30,7 @@ const Experience = () => {
           />
         </div>
         <p
-          className={`flex items-center sm:justify-start justify-center ${
+          className={`flex items-center justify-center ${
             styles.paragraph
           } w-full text-dimWhite sm:px-5 px-3 sm:pb-5 pb-2 ${
             scroll ? "fade-in-from-left-to-right" : "hidden"
