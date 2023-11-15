@@ -41,9 +41,11 @@ const Work = () => {
           // These are the technologies I’ve worked with
         </p>
       </div>
-      <div className="flex flex-wrap justify-evenly w-[80%] h-[80%] overflow-hidden md:p-[50px] p-[20px]">
+      <div className="flex flex-wrap justify-evenly w-full sm:w-[90%] h-[80%] overflow-hidden md:p-[50px] p-[20px]">
         {work.map((card) => (
-          <div className="flip-card flex justify-center items-center w-[80%] sm:w-[350px] h-[250px] rounded-[8px] sm:m-[10px] m-[5px] hover:cursor-pointer work-card relative shadow-lg hover:shadow-[#211e36] overflow-hidden">
+          <div className={`flip-card flex justify-center duration-500 transform items-center w-[80%] sm:w-[350px] h-[250px] rounded-[8px] sm:m-[10px] m-[5px] hover:cursor-pointer work-card relative shadow-lg hover:shadow-[#211e36] overflow-hidden ${
+            scroll ? "fade-in-from-TopToBottom" : "hidden"
+          }`}>
             <div className="flip-card-inner w-full h-full">
               <div className="flip-card-front flex justify-center items-center text-lg sm:text-xl text-[white] font-mono bg-[#211e36] bg-opacity-1 m-[2px] border-[0.5px] border-cyan-400 rounded-[8px]">
                 <span className="text-center p-5">{card.title}</span>
