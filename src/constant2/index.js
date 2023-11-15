@@ -79,7 +79,7 @@ export const work = [
   {
     title: "Library Management System",
     content:
-      'The project "Library Management System" is developed in web base, which mainly focuses on basic operations in a library like adding new member, new books, and updating new information, searching books and members and facility to borrow and return books. (Guided by Dr. Sangram Keshari Swain)',
+      'The project "Library Management System" is developed in web base, which mainly focuses on basic operations in a library. (Guided by Dr. Sangram Keshari Swain)',
     src: "https://github.com/RohitGhorai/GramTarang",
   },
   {

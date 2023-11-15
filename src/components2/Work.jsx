@@ -45,10 +45,10 @@ const Work = () => {
         {work.map((card) => (
           <div className="flip-card flex justify-center items-center w-[80%] sm:w-[350px] h-[250px] rounded-[8px] sm:m-[10px] m-[5px] hover:cursor-pointer work-card relative shadow-lg hover:shadow-[#211e36] overflow-hidden">
             <div className="flip-card-inner w-full h-full">
-              <div className="flip-card-front flex justify-center items-center text-xl text-[white] font-mono bg-[#211e36] bg-opacity-1 m-[2px] border-[0.5px] border-cyan-400 rounded-[8px]">
+              <div className="flip-card-front flex justify-center items-center text-lg sm:text-xl text-[white] font-mono bg-[#211e36] bg-opacity-1 m-[2px] border-[0.5px] border-cyan-400 rounded-[8px]">
                 <span className="text-center p-5">{card.title}</span>
               </div>
-              <div className="flip-card-back flex flex-col justify-center items-center text-sm text-[white] font-mono bg-gray-800 m-[2px] border-[1px] border-cyan-400 rounded-[8px]">
+              <div className="flip-card-back flex flex-col justify-center items-center text-xs sm:text-sm text-[white] font-mono bg-gray-800 m-[2px] border-[1px] border-cyan-400 rounded-[8px]">
                 <span className="text-center font-poppins p-5">
                   {card.content}
                 </span>
