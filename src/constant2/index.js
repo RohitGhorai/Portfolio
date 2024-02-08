@@ -1,14 +1,3 @@
-import {
-  HTML,
-  NODEJS,
-  MYSQL,
-  AWS,
-  JS,
-  CSS,
-  REACT,
-  GITHUB,
-} from "../assets2/index";
-
 export const navLinks = [
   {
     id: "home",
@@ -35,43 +24,58 @@ export const navLinks = [
 export const exp = [
   {
     id: "1",
-    title: "HTML",
-    src: HTML,
+    title: "Java",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
   },
   {
     id: "2",
-    title: "CSS",
-    src: CSS,
+    title: "Spring-boot",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
   },
   {
     id: "3",
     title: "Javascript",
-    src: JS,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   },
   {
     id: "4",
     title: "React",
-    src: REACT,
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
   {
     id: "5",
-    title: "Github",
-    src: GITHUB,
+    title: "Node JS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
   {
     id: "6",
-    title: "Node JS",
-    src: NODEJS,
+    title: "Express JS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
   },
   {
     id: "7",
-    title: "MySql",
-    src: MYSQL,
+    title: "MONGO DB",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
   },
   {
     id: "8",
-    title: "AWS",
-    src: AWS,
+    title: "HTML",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    id: "9",
+    title: "TAILWIND CSS",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+  },
+  {
+    id: "10",
+    title: "MySql",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+  },
+  {
+    id: "11",
+    title: "Github",
+    src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
   },
 ];
 

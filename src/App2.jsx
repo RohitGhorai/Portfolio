@@ -35,7 +35,7 @@ function App2() {
   }, []);
   console.log(scrollProgress);
   return (
-    <div className="bg-[#04172D] overflow-hidden">
+    <div className="dark:bg-[#04172D] bg-white overflow-hidden">
       <Sidebar />
       <Navbar scrollProgress={scrollProgress} />
       <Home />

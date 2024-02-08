@@ -19,7 +19,7 @@ const Work = () => {
       <div className="w-[90%] sm:w-[70%] md:w-[60%] lg:w-[50%] flex flex-col justify-center sm:pb-0 pb-[30px] items-center overflow-hidden">
         <div className="flex flex-col sm:p-4 p-3">
           <h2
-            className={`font-poppins font-semibold sm:text-[30px] md:text-[40px] text-[24px] sm:leading-[60px] leading-[50px] text-white opacity-80 ${
+            className={`font-poppins font-semibold sm:text-[30px] md:text-[40px] text-[24px] sm:leading-[60px] leading-[50px] dark:text-white text-black opacity-80 ${
               scroll ? "fade-in-from-TopToBottom" : "hidden"
             }`}
           >
@@ -43,20 +43,22 @@ const Work = () => {
       </div>
       <div className="flex flex-wrap justify-evenly w-full sm:w-[90%] h-[80%] overflow-hidden md:p-[50px] p-[20px]">
         {work.map((card) => (
-          <div className={`flip-card flex justify-center duration-500 transform items-center w-[80%] sm:w-[350px] h-[250px] rounded-[8px] sm:m-[10px] m-[5px] hover:cursor-pointer work-card relative shadow-lg hover:shadow-[#211e36] overflow-hidden ${
-            scroll ? "fade-in-from-TopToBottom" : "hidden"
-          }`}>
+          <div
+            className={`flip-card flex justify-center duration-500 transform items-center w-[80%] sm:w-[350px] h-[250px] rounded-[8px] sm:m-[10px] m-[5px] hover:cursor-pointer work-card relative shadow-lg hover:shadow-[#211e36] overflow-hidden ${
+              scroll ? "fade-in-from-TopToBottom" : "hidden"
+            }`}
+          >
             <div className="flip-card-inner w-full h-full">
-              <div className="flip-card-front flex justify-center items-center text-lg sm:text-xl text-[white] font-mono bg-[#211e36] bg-opacity-1 m-[2px] border-[0.5px] border-cyan-400 rounded-[8px]">
+              <div className="flip-card-front flex justify-center items-center text-lg sm:text-xl text-black dark:text-[white] font-mono bg-cyan-100 dark:bg-[#211e36] bg-opacity-1 m-[2px] border-[0.5px] border-slate-800 dark:border-cyan-400 rounded-[8px]">
                 <span className="text-center p-5">{card.title}</span>
               </div>
-              <div className="flip-card-back flex flex-col justify-center items-center text-xs sm:text-sm text-[white] font-mono bg-gray-800 m-[2px] border-[1px] border-cyan-400 rounded-[8px]">
+              <div className="flip-card-back flex flex-col justify-center items-center text-xs sm:text-sm text-[white] font-mono dark:bg-gray-800 bg-gray-500 m-[2px] border-[1px] border-slate-800 dark:border-cyan-400 rounded-[8px]">
                 <span className="text-center font-poppins p-5">
                   {card.content}
                 </span>
                 <a href={card.src}>
                   <button
-                    className="w-[80px] h-[40px] font-semibold rounded-[5px] border-[1px] font-mono border-cyan-400 bg-cyan-400 hover:bg-cyan-500 text-[#000] hover:scale-[1.03] transition-transform duration-200"
+                    className="w-[80px] h-[40px] font-semibold rounded-[5px] border-[1px] font-mono border-cyan-400 bg-cyan-400 hover:bg-cyan-500 text-slate-800 hover:scale-[1.03] transition-transform duration-200"
                     href={card.src}
                   >
                     Visit

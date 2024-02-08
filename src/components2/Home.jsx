@@ -1,5 +1,5 @@
 import { styles } from "../style";
-import profile from "../assets2/profile.png";
+import profile from "../assets/profile.png";
 import { FaLinkedin, FaGithubSquare, FaFacebookSquare } from "react-icons/fa";
 import { BsInstagram } from "react-icons/bs";
 import Button from "./Button";
@@ -16,7 +16,7 @@ const Home = () => {
           Hi, my name is
         </p>
         <h2 className={`${styles.heading2} overflow-hidden`}>
-          <span className="text-[#C2CCE5]">
+          <span className="text-gray-800 dark:text-[#C2CCE5]">
             <TypeWriter
               options={{
                 strings: ["Rohit Ghorai", "Rohit"],
@@ -26,10 +26,12 @@ const Home = () => {
               }}
             />
           </span>
-          <span className="text-[grey]">I’m a Full Stack Developer.</span>
+          <span className="text-gray-600 dark:text-[grey]">
+            I’m a Full Stack Developer.
+          </span>
         </h2>
         <p
-          className={`${styles.paragraph} text-[grey] max-w-[592px] pt-[10px]`}
+          className={`${styles.paragraph} dark:text-[grey] max-w-[592px] pt-[10px]`}
         >
           I’m a full-stack developer specializing in building (and occasionally
           designing) exceptional, digital experiences. Currently, I’m focused on
@@ -57,7 +59,7 @@ const Home = () => {
         </a>
       </div>
       <div className="flex justify-center sm:justify-start xs:p-[35px] py-[20px]">
-        <div className="relative sm:w-[320px] sm:h-[320px] xs:w-[260px] xs:h-[260px] w-[163px] h-[163px] rounded-full bg-[#D9D9D9] lg:hover:scale-125 transform transition duration-300 lg:hover:cursor-pointer">
+        <div className="relative sm:w-[320px] sm:h-[320px] xs:w-[260px] xs:h-[260px] w-[163px] h-[163px] rounded-full bg-slate-400   dark:bg-[#D9D9D9] lg:hover:scale-125 transform transition duration-300 lg:hover:cursor-pointer">
           <div
             className="absolute sm:w-[308px] sm:h-[308px] xs:w-[250px] xs:h-[250px] w-[156px] h-[156px] rounded-full sm:m-[6.5px] m-[3.55px] xs:m-[5.5px]"
             style={{

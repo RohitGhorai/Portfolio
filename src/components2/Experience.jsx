@@ -12,12 +12,12 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="flex flex-col justify-center items-center w-full h-screen md:py-0 py-[80px]"
+      className="flex flex-col justify-center items-center w-full h-full sm:h-screen md:py-0 py-[80px]"
     >
       <div className="w-[80%] sm:w-[70%] lg:w-[50%] flex flex-col justify-center sm:pb-0 pb-[30px] items-center overflow-hidden">
         <div className="flex flex-col sm:p-4 p-3">
           <h2
-            className={`font-poppins font-semibold sm:text-[40px] text-[30px] sm:leading-[60px] leading-[50px] text-white opacity-80 ${
+            className={`font-poppins font-semibold sm:text-[40px] text-[30px] sm:leading-[60px] leading-[50px] text-black dark:text-white opacity-80 ${
               scroll ? "fade-in-from-TopToBottom" : "hidden"
             }`}
           >
@@ -39,33 +39,37 @@ const Experience = () => {
           // These are the technologies I’ve worked with
         </p>
       </div>
-      <div className="flex flex-wrap w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] justify-center sm:justify-start items-center overflow-hidden">
+      <div className="flex flex-wrap w-[80%] sm:w-[70%] md:w-[60%] lg:w-[50%] justify-center items-center overflow-hidden">
         {exp.map((exp, index) => (
           <div
-            className={`flex flex-col justify-center items-center md:w-[155px] w-[128px] md:h-[149px] h-[127px] mt-[15px] sm:mt-[15px] ml-[30px] sm:ml-[15px] sm:mb-[10px] mb-0 hover:cursor-pointer hover:border-t-[#962929] hover:border-l-[#962929] hover:border-t-[1px] hover:border-l-[1px] relative rounded-[15px] shadow-lg hover:shadow-[#211e36] border-[1px] border-[#211e36] overflow-hidden ${
-              scroll ? [
-                index % 2 !== 0
-                  ? "fade-in-from-left-to-right"
-                  : "fade-in-from-right-to-left",
-              ] : "hidden"
+            className={`bg-white hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 flex flex-col justify-center items-center md:w-[120px] w-[100px] md:h-[130px] h-[115px] mt-[15px] sm:mt-[15px] ml-[30px] sm:ml-[15px] sm:mb-[10px] mb-0 hover:cursor-pointer hover:border-t-cyan-600 hover:border-l-cyan-600 hover:border-t-[1px] hover:border-l-[1px] relative rounded-[15px] shadow-lg hover:shadow-[#211e36] border-[1px] border-[#211e36] overflow-hidden ${
+              scroll
+                ? [
+                    index % 2 !== 0
+                      ? "fade-in-from-left-to-right"
+                      : "fade-in-from-right-to-left",
+                  ]
+                : "hidden"
             }`}
           >
             <img
               id={exp.id}
               src={exp.src}
               className={`${
-                scroll ? [
-                  index % 2 !== 0
-                    ? "fade-in-from-left-to-right"
-                    : "fade-in-from-right-to-left",
-                ] : "hidden"
-              } my-2`}
-              alt="html"
+                scroll
+                  ? [
+                      index % 2 !== 0
+                        ? "fade-in-from-left-to-right"
+                        : "fade-in-from-right-to-left",
+                    ]
+                  : "hidden"
+              } my-2 object-fill h-[60px] w-[20]`}
+              alt={exp.title + ` logo`}
             />
             <p
               className={`${styles.paragraph} text-dimWhite pb-5 ${
                 scroll ? "fade-in-from-right-to-left" : "hidden"
-              } justify-center items-center flex w-full h-full`}
+              } justify-center items-center flex w-full h-full text-cyan-700 font-semibold dark:text-slate-200`}
             >
               {exp.title}
             </p>

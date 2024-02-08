@@ -25,7 +25,7 @@ const ProgressBar = ({ styles }) => {
   }, []);
 
   return (
-    <div className={`${styles} justify-center`}>
+    <div className={`${styles} justify-center sm:visible hidden`}>
       <div
         className="h-[1px] bg-[#962929] rounded"
         style={{
