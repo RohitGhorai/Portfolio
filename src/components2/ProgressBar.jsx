@@ -25,9 +25,9 @@ const ProgressBar = ({ styles }) => {
   }, []);
 
   return (
-    <div className={`${styles} justify-center sm:visible hidden`}>
+    <div className={`${styles} justify-center md:visible hidden`}>
       <div
-        className="h-[1px] bg-[#962929] rounded"
+        className="h-[1px] bg-slate-400 dark:md:bg-[#962929] rounded"
         style={{
           transition: "width 0.05s ease-in-out",
           width: `${scrollProgress}%`,

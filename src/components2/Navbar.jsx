@@ -26,11 +26,11 @@ const Navbar = ({ scrollProgress }) => {
             <img
               src={logo}
               alt="logo"
-              className="w-[47px] h-[47px] bg-white rounded-full"
+              className="w-[30px] h-[30px] md:w-[47px] md:h-[47px] bg-white rounded-full"
               style={{ mixBlendMode: "white" }}
             />
-            <span className="font-mono text-slate-900 dark:text-red-800 text-2xl font-semibold">
-              Rohit
+            <span className="font-mono text-slate-900 dark:text-red-800 text-xl md:text-2xl font-semibold">
+              ohit
             </span>
           </div>
           <ul className="hidden sm:flex gap-[44px] items-center justify-end">
@@ -44,7 +44,7 @@ const Navbar = ({ scrollProgress }) => {
           </ul>
           <div
             onClick={handleClick}
-            className="sm:hidden w-[30px] h-[20px] cursor-pointer text-slate-800 hover:text-slate-200 dark:hover:text-white"
+            className="sm:hidden w-[30px] h-[20px] cursor-pointer text-slate-800 dark:text-slate-300 hover:text-slate-200 dark:hover:text-white"
           >
             {toggle ? (
               <FaTimes className="w-[30px] h-[20px]" />
@@ -57,12 +57,12 @@ const Navbar = ({ scrollProgress }) => {
           className={
             !toggle
               ? "hidden"
-              : "absolute top-0 w-full h-[100vh] flex flex-col justify-center items-center navToggle"
+              : "absolute top-0 w-full h-[100vh] flex flex-col justify-center items-center navToggle bg-white dark:bg-[#04172D]"
           }
         >
           {navLinks.map((navLink) => (
             <a href={`#${navLink.id}`} key={`${navLink.id}`}>
-              <li className="font-poppins py-6 text-black text-2xl hover:text-[#b7b4c8]">
+              <li className="font-poppins py-6 text-slate-700 hover:text-slate-800 text-xl dark:text-slate-200 dark:hover:text-[#b7b4c8]">
                 {navLink.title}
               </li>
             </a>

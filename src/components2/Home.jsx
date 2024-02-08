@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="flex sm:flex-row flex-col-reverse w-full h-full md:h-screen py-[80px] md:py-0 justify-center items-center px-[35px] lg:px-[18px] overflow-hidden"
+      className="flex sm:flex-row flex-col-reverse w-full h-full sm:h-screen py-[80px] md:py-0 justify-center items-center px-[35px] lg:px-[18px] overflow-hidden"
     >
       <div className={`${styles.flexStart} flex-col sm:w-[50%] w-full`}>
         <p className="font-poppins font-semibold text-[12px] leading-[18px] text-[#962929]">
